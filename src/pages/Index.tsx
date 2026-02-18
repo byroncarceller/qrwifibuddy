@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
-import { Wifi, Eye, EyeOff, Download, Copy, Check } from "lucide-react";
+import { Wifi, Eye, EyeOff, Download, Copy, Check, ShieldCheck } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -179,6 +179,17 @@ const Index = () => {
             </div>
           </div>
         )}
+
+        {/* Privacy Disclaimer */}
+        <div className="bg-card/50 rounded-2xl border border-border p-4 flex gap-3 items-start">
+          <ShieldCheck className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+          <div className="space-y-1">
+            <p className="text-xs font-medium text-foreground">Your privacy is protected</p>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              We do not store, log, or transmit any information you enter. All data is processed entirely in your browser and is permanently deleted when you close or refresh this page. Be sure to download or save your QR code — you will need to regenerate it each time.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
